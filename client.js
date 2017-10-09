@@ -25,5 +25,6 @@ function swapColor(){
   console.log('swap');
 }
 function deleteBtn(){
+$(this).parent().remove();
 console.log('delete');
 }
