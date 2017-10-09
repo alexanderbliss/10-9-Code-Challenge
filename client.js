@@ -8,20 +8,21 @@
 
 function generateClick(){
   console.log('click');
-  $('.container').append('<div class=clicks>' + "Button Clicked" + '</div>');
+  $('.container').append('<div class=clicks></div>');
   genButton();
 
 }
 
 function genButton(){
-  $('.clicks').append('<button class=swap>Swap</button>');
-  $('.clicks').append('<button class=delete>Delete</button>');
+  $('.clicks').append('<button class="swap">Swap</button>');
+  $('.clicks').append('<button class="delete">Delete</button>');
 $('.swap').on('click', swapColor);
 $('.delete').on('click' , deleteBtn);
-
+$tr.append('<button class="deleteBtn">Delete</button>');
 }
 function swapColor(){
-  $('.clicks').css('background-color', 'yellow');
+  $(this).parent().css('background-color', 'yellow');
+
   console.log('swap');
 }
 function deleteBtn(){
